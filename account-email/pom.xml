@@ -43,4 +43,36 @@
   		<scope>test</scope>
   	</dependency>
   </dependencies>
+  
+  <!-- 配置远程仓库 -->
+  <repositories>
+  	<repository>
+  		<id>jboss</id>
+  		<name>JBoss Repository</name>
+  		<url>http://repository.jboss.com/maven2/</url>
+  		<releases>
+  			<enabled>true</enabled>
+  			<updatePolicy>daily</updatePolicy><!-- 每天从远程仓库检查更新一次 -->
+  			<checksumPolicy>ignore</checksumPolicy><!-- ignore Maven完全忽略校验和错误 -->
+  		</releases>
+  		<snapshots>
+  			<enabled>false</enabled>
+  		</snapshots>
+  		<layout>default</layout>
+  	</repository>
+  </repositories>
+  
+  <!-- 将项目生成的构件部署到远程仓库中 -->
+  <!-- <distributionManagement>
+  	<repository>
+  		<id></id>
+  		<name></name>
+  		<url></url>
+  	</repository>
+  	<snapshotRepository>
+  		<id></id>
+  		<name></name>
+  		<url></url>
+  	</snapshotRepository>
+  </distributionManagement> -->
 </project>
